@@ -86,18 +86,6 @@
             border-radius: 1rem;
             overflow: hidden;
         }
-        
-        /* Estilo para texto del formulario en negro */
-        .form-input {
-            color: #111827;
-        }
-        
-        /* Estilo para select del formulario cuando se escoge una opción */
-        select.is-selected {
-            background-color: #dbeafe; /* Tailwind's blue-100 */
-            color: #1e3a8a; /* Tailwind's blue-800 */
-            font-weight: 500;
-        }
     </style>
 </head>
 <body class="text-white">
@@ -133,12 +121,10 @@
 
                     <main class="pt-20"> <!-- Padding top para compensar el header fijo -->
                         
-                        <!-- SECCIÓN 1: HERO (IMAGEN ACTUALIZADA) -->
-                        <section class="relative min-h-[70vh] flex items-center bg-black">
-                            <div class="absolute inset-0 z-0 opacity-40">
-                                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=2070&auto=format&fit=crop" alt="Lápiz sobre una hoja de examen de opción múltiple" class="w-full h-full object-cover">
-                            </div>
-                            <div class="container relative z-10 mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
+                        <!-- SECCIÓN 1: HERO (DISEÑO CON GRADIENTE) -->
+                        <section class="relative min-h-[70vh] flex items-center bg-gray-900">
+                             <!-- Contenido de Texto -->
+                            <div class="container relative z-10 mx-auto px-6 w-full md:w-3/5 lg:w-1/2">
                                 <div class="text-center md:text-left">
                                     <h2 class="text-4xl lg:text-6xl font-black text-white leading-tight">
                                         Gana el Concurso Docente <span class="text-green-400">Prepárate con Nosotros</span>
@@ -148,15 +134,23 @@
                                     </p>
                                 </div>
                             </div>
+                             <!-- Imagen y Gradiente -->
+                            <div class="absolute top-0 right-0 h-full w-2/3 md:w-1/2 z-0">
+                                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=2070&auto=format&fit=crop" alt="Lápiz sobre una hoja de examen de opción múltiple" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/70 to-transparent"></div>
+                            </div>
                         </section>
 
-                        <!-- SECCIÓN 2: INFORMACIÓN ACTUALIZADA -->
-                        <section class="relative min-h-[70vh] flex items-center bg-gray-800">
-                             <div class="absolute inset-0 z-0 opacity-30">
+                        <!-- SECCIÓN 2: INFORMACIÓN ACTUALIZADA (DISEÑO CON GRADIENTE) -->
+                        <section class="relative min-h-[70vh] flex items-center justify-end bg-gray-800">
+                             <!-- Imagen y Gradiente -->
+                            <div class="absolute top-0 left-0 h-full w-2/3 md:w-1/2 z-0">
                                 <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2187&auto=format&fit=crop" alt="Equipo diverso colaborando en una oficina moderna y oscura" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-l from-gray-800 via-gray-800/70 to-transparent"></div>
                             </div>
-                             <div class="container relative z-10 mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
-                                <div class="md:col-start-2 text-center md:text-left">
+                             <!-- Contenido de Texto -->
+                             <div class="container relative z-10 mx-auto px-6 w-full md:w-3/5 lg:w-1/2">
+                                <div class="text-center md:text-left">
                                     <h2 class="text-3xl lg:text-4xl font-bold text-white">
                                         Te preparamos con <span class="text-indigo-400">Información Actualizada</span>
                                     </h2>
@@ -167,12 +161,10 @@
                             </div>
                         </section>
 
-                        <!-- SECCIÓN 3: COMUNIDAD -->
-                        <section class="relative min-h-[70vh] flex items-center bg-black">
-                            <div class="absolute inset-0 z-0 opacity-40">
-                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Grupo diverso de personas interactuando en un ambiente colaborativo" class="w-full h-full object-cover">
-                            </div>
-                            <div class="container relative z-10 mx-auto grid md:grid-cols-2 gap-8 items-center px-6">
+                        <!-- SECCIÓN 3: COMUNIDAD (DISEÑO CON GRADIENTE) -->
+                        <section class="relative min-h-[70vh] flex items-center bg-gray-900">
+                            <!-- Contenido de Texto -->
+                           <div class="container relative z-10 mx-auto px-6 w-full md:w-3/5 lg:w-1/2">
                                  <div class="text-center md:text-left">
                                     <h2 class="text-3xl lg:text-4xl font-bold text-white">
                                         Prepararte en <span class="text-green-400">Comunidad</span> es Mucho Mejor
@@ -184,6 +176,11 @@
                                         Unirme a la Comunidad
                                     </a>
                                 </div>
+                            </div>
+                             <!-- Imagen y Gradiente -->
+                             <div class="absolute top-0 right-0 h-full w-2/3 md:w-1/2 z-0">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Grupo diverso de personas interactuando en un ambiente colaborativo" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/70 to-transparent"></div>
                             </div>
                         </section>
 
@@ -263,56 +260,62 @@
                     <h1 class="text-4xl font-black text-gray-800 mb-2">Planes de Inversión</h1>
                     <p class="text-gray-600 mb-12 text-center">Elige el plan que mejor se ajuste a tus necesidades y asegura tu futuro.</p>
                     <div class="grid md:grid-cols-3 gap-8 w-full max-w-6xl">
-                        <div onclick="navigateToForm('Ordinario')" class="cursor-pointer plan-card block bg-white p-8 rounded-2xl shadow-xl border-t-8 border-green-500 transform hover:-translate-y-2 transition-all duration-300"><h2 class="text-2xl font-bold text-gray-800">Pago Ordinario</h2><div class="mt-6"><p class="text-lg text-gray-700"><strong>Inscripción:</strong> <span class="font-bold text-green-600">$187.000</span></p><p class="text-sm text-gray-500">Abierta hasta Agosto 15 de 2025</p></div><div class="mt-4"><p class="text-lg text-gray-700"><strong>Matrícula:</strong> <span class="font-bold text-green-600">$768.000</span></p><p class="text-sm text-gray-500">Hasta el 20 de Octubre</p></div></div>
-                        <div onclick="navigateToForm('Matricularme Ya')" class="cursor-pointer plan-card block bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-blue-500 transform hover:-translate-y-4 scale-105 transition-all duration-300 relative"><div class="absolute -top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">RECOMENDADO</div><h2 class="text-2xl font-bold text-blue-800">Matricularme Ya</h2><p class="text-gray-500 mt-2">Un único pago con el máximo descuento</p><div class="mt-6"><p class="text-4xl font-black text-blue-600">$886.000</p><p class="text-sm text-gray-500">Hasta el 15 de Agosto</p></div></div>
-                        <div onclick="navigateToForm('Extraordinario')" class="cursor-pointer plan-card block bg-white p-8 rounded-2xl shadow-xl border-t-8 border-red-500 transform hover:-translate-y-2 transition-all duration-300"><h2 class="text-2xl font-bold text-gray-800">Pago Extraordinario</h2><div class="mt-6"><p class="text-lg text-gray-700"><strong>Inscripción:</strong> <span class="font-bold text-red-600">$229.000</span></p><p class="text-sm text-gray-500">Hasta el 15 de Octubre</p></div><div class="mt-4"><p class="text-lg text-gray-700"><strong>Matrícula:</strong> <span class="font-bold text-red-600">$896.000</span></p><p class="text-sm text-gray-500">Hasta el 12 de Noviembre</p></div></div>
+                        <div onclick="navigateToForm()" class="cursor-pointer plan-card block bg-white p-8 rounded-2xl shadow-xl border-t-8 border-green-500 transform hover:-translate-y-2 transition-all duration-300"><h2 class="text-2xl font-bold text-gray-800">Pago Ordinario</h2><div class="mt-6"><p class="text-lg text-gray-700"><strong>Inscripción:</strong> <span class="font-bold text-green-600">$187.000</span></p><p class="text-sm text-gray-500">Abierta hasta Agosto 15 de 2025</p></div><div class="mt-4"><p class="text-lg text-gray-700"><strong>Matrícula:</strong> <span class="font-bold text-green-600">$768.000</span></p><p class="text-sm text-gray-500">Hasta el 20 de Octubre</p></div></div>
+                        <div onclick="navigateToForm()" class="cursor-pointer plan-card block bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-blue-500 transform hover:-translate-y-4 scale-105 transition-all duration-300 relative"><div class="absolute -top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">RECOMENDADO</div><h2 class="text-2xl font-bold text-blue-800">Matricularme Ya</h2><p class="text-gray-500 mt-2">Un único pago con el máximo descuento</p><div class="mt-6"><p class="text-4xl font-black text-blue-600">$886.000</p><p class="text-sm text-gray-500">Hasta el 15 de Agosto</p></div></div>
+                        <div onclick="navigateToForm()" class="cursor-pointer plan-card block bg-white p-8 rounded-2xl shadow-xl border-t-8 border-red-500 transform hover:-translate-y-2 transition-all duration-300"><h2 class="text-2xl font-bold text-gray-800">Pago Extraordinario</h2><div class="mt-6"><p class="text-lg text-gray-700"><strong>Inscripción:</strong> <span class="font-bold text-red-600">$229.000</span></p><p class="text-sm text-gray-500">Hasta el 15 de Octubre</p></div><div class="mt-4"><p class="text-lg text-gray-700"><strong>Matrícula:</strong> <span class="font-bold text-red-600">$896.000</span></p><p class="text-sm text-gray-500">Hasta el 12 de Noviembre</p></div></div>
                     </div>
                 </div>
             `,
             '/form': `
-                <div class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
+                <div class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6 text-gray-800">
                      <a href="#/plans" class="absolute top-6 left-6 text-gray-700 hover:text-indigo-600 font-bold py-2 px-4 rounded-lg bg-white shadow-md transition-all"><i class="fas fa-arrow-left mr-2"></i> Volver</a>
-                    <div class="bg-white p-8 md:p-12 rounded-2xl shadow-2xl w-full max-w-2xl">
-                        <h1 class="text-3xl font-bold text-gray-800 mb-2">Formulario de Inscripción</h1>
-                        <p class="text-gray-500 mb-8" id="form-subtitle">Completa tus datos para el plan seleccionado.</p>
-                        <form id="test-form" onsubmit="event.preventDefault(); window.location.hash = '/payment';">
-                            <div class="space-y-6">
-                                <div><label for="docType" class="block text-sm font-medium text-gray-700">Tipo de Documento</label><select id="docType" name="docType" required class="form-input mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition-colors"><option value="" disabled selected>Selecciona un tipo...</option><option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option><option value="Cédula de Extranjería">Cédula de Extranjería</option><option value="Pasaporte">Pasaporte</option></select></div>
-                                <div><label for="idNumber" class="block text-sm font-medium text-gray-700">Número de Documento</label><input type="number" id="idNumber" name="idNumber" required class="form-input mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></div>
-                                <div><label for="fullName" class="block text-sm font-medium text-gray-700">Nombre Completo</label><input type="text" id="fullName" name="fullName" required class="form-input mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></div>
-                                <div><label for="phone" class="block text-sm font-medium text-gray-700">Número de Celular</label><input type="tel" id="phone" name="phone" required class="form-input mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></div>
-                                <div><label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label><input type="email" id="email" name="email" required class="form-input mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></div>
-                                <div><label for="profile" class="block text-sm font-medium text-gray-700">Perfil Profesional</label><select id="profile" name="profile" required class="form-input mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition-colors"><option value="" disabled selected>Selecciona tu perfil...</option><option value="Inglés">Inglés</option><option value="Matemática">Matemática</option><option value="Ciencias Sociales">Ciencias Sociales</option><option value="Español">Español</option><option value="Ciencias Naturales">Ciencias Naturales</option><option value="Básica primaria">Básica Primaria</option><option value="Pre Escolar">Pre Escolar</option></select></div>
+                    <div class="w-full max-w-4xl mx-auto">
+                        <!-- PASO 1: FORMULARIO -->
+                        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-2xl w-full">
+                            <h1 class="text-3xl font-bold text-gray-800 mb-2">Paso 1: Completa tu Inscripción</h1>
+                            <p class="text-gray-500 mb-8">Llena tus datos para quedar registrado en nuestro sistema.</p>
+                            <div class="w-full" style="height: 500px;">
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfIrL-MRrydyjEKWuqbptBH1EmjNUQGQ6chkH8-Q7gPsPM07w/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
                             </div>
-                            <div class="mt-8"><button type="submit" class="w-full bg-indigo-600 hover:bg-green-500 text-white font-bold py-4 px-4 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105">Enviar y Continuar al Pago</button></div>
-                        </form>
-                    </div>
-                </div>
-            `,
-             '/payment': `
-                <div class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6 text-center">
-                    <div class="bg-white p-12 rounded-2xl shadow-2xl max-w-2xl">
-                        <div class="text-green-500 mb-6"><i class="fas fa-check-circle fa-5x"></i></div>
-                        <h1 class="text-3xl font-bold text-gray-800 mb-4">Selecciona tu Método de Pago</h1>
-                        <p class="text-gray-600 mb-8" id="payment-message">Datos recibidos. Ahora puedes proceder al pago seguro.</p>
-                        <div class="grid grid-cols-2 gap-4">
-                             <button style="background-color: #A435F0;" class="text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center text-lg transition-transform transform hover:scale-105">
-                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.25c-5.376 0-9.75 4.374-9.75 9.75s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S17.376 2.25 12 2.25zm.09 15.14c-2.025 0-3.834-1.008-4.823-2.71L8.2 13.5c.33.614.93 1.156 1.84 1.156 1.312 0 1.9-1.042 1.9-2.227v-3.72h1.472v3.704c0 2.22-1.25 3.42-3.23 3.42z"/></svg>
-                                Nequi
-                             </button>
-                             <button style="background-color: #000000;" class="text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center text-lg transition-transform transform hover:scale-105">
-                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M22.603 6.833c.06.333.095.675.095 1.026 0 5.86-3.15 10.53-7.857 10.53-1.21 0-2.263-.263-3.24-.76l-1.46 1.458c-.3.3-.78.3-1.08 0l-.82-.82c-.3-.3-.3-.78 0-1.08l1.458-1.458c-.496-.976-.758-2.028-.758-3.235 0-4.697 4.673-7.856 10.53-7.856.35 0 .69.036 1.025.095l-9.52 9.52c.294 2.85 2.58 5.138 5.43 5.43l9.52-9.52z"/></svg>
-                                Bancolombia
-                             </button>
-                             <button style="background-color: #123262;" class="text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center text-lg transition-transform transform hover:scale-105">
-                                <i class="fas fa-credit-card mr-2"></i>PayU
-                             </button>
-                             <button style="background-color: #2E3192;" class="text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center text-lg transition-transform transform hover:scale-105">
-                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM388.7 228.7c-3.9-3.9-10.2-3.9-14.1 0L266.3 336.9l-68.9-68.9c-3.9-3.9-10.2-3.9-14.1 0l-22.6 22.6c-3.9 3.9-3.9 10.2 0 14.1l96 96c3.9 3.9 10.2 3.9 14.1 0l144-144c3.9-3.9 3.9-10.2 0-14.1l-22.6-22.6z"/></svg>
-                                PSE
-                             </button>
                         </div>
-                        <p class="text-xs text-gray-400 mt-6">Tu conexión es segura.</p>
+
+                        <!-- PASO 2: PAGO -->
+                        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-2xl w-full mt-12">
+                            <div class="text-center">
+                                <div class="text-green-500 mb-6"><i class="fas fa-money-check-alt fa-4x"></i></div>
+                                <h1 class="text-3xl font-bold text-gray-800 mb-2">Paso 2: Realiza el Pago</h1>
+                                <p class="text-gray-600 mb-8">Una vez completes el formulario, elige tu método de pago seguro.</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                                <button id="nequi-btn" style="background-color: #A435F0;" class="text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center text-lg transition-transform transform hover:scale-105">
+                                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.25c-5.376 0-9.75 4.374-9.75 9.75s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S17.376 2.25 12 2.25zm.09 15.14c-2.025 0-3.834-1.008-4.823-2.71L8.2 13.5c.33.614.93 1.156 1.84 1.156 1.312 0 1.9-1.042 1.9-2.227v-3.72h1.472v3.704c0 2.22-1.25 3.42-3.23 3.42z"/></svg>
+                                    Nequi
+                                </button>
+                                <button style="background-color: #000000;" class="text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center text-lg transition-transform transform hover:scale-105">
+                                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M22.603 6.833c.06.333.095.675.095 1.026 0 5.86-3.15 10.53-7.857 10.53-1.21 0-2.263-.263-3.24-.76l-1.46 1.458c-.3.3-.78.3-1.08 0l-.82-.82c-.3-.3-.3-.78 0-1.08l1.458-1.458c-.496-.976-.758-2.028-.758-3.235 0-4.697 4.673-7.856 10.53-7.856.35 0 .69.036 1.025.095l-9.52 9.52c.294 2.85 2.58 5.138 5.43 5.43l9.52-9.52z"/></svg>
+                                    Bancolombia
+                                </button>
+                                <button style="background-color: #123262;" class="text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center text-lg transition-transform transform hover:scale-105">
+                                    <i class="fas fa-credit-card mr-2"></i>PayU
+                                </button>
+                                <button style="background-color: #2E3192;" class="text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center text-lg transition-transform transform hover:scale-105">
+                                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM388.7 228.7c-3.9-3.9-10.2-3.9-14.1 0L266.3 336.9l-68.9-68.9c-3.9-3.9-10.2-3.9-14.1 0l-22.6 22.6c-3.9 3.9-3.9 10.2 0 14.1l96 96c3.9 3.9 10.2 3.9 14.1 0l144-144c3.9-3.9 3.9-10.2 0-14.1l-22.6-22.6z"/></svg>
+                                    PSE
+                                </button>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-6">Tu conexión es segura.</p>
+                        </div>
+                    </div>
+                     <!-- Modal para el código QR de Nequi -->
+                    <div id="qr-modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+                        <div class="bg-white p-6 rounded-lg text-center relative max-w-xs">
+                            <button id="close-modal-btn" class="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl font-bold">&times;</button>
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4">Paga con Nequi</h2>
+                            <p class="text-gray-600 mb-4">Escanea el código QR desde la app de Nequi o tu banco.</p>
+                            <!-- REEMPLAZA ESTA URL CON LA URL DE TU IMAGEN QR -->
+                            <img src="https://i.imgur.com/9g2DGVQ.jpeg" alt="Código QR para pago con Nequi" class="mx-auto">
+                            <p class="mt-4 text-sm text-gray-500">Prog De Form Concurso Doc...<br>Cód: 989417428</p>
+                        </div>
                     </div>
                 </div>
             `
@@ -320,8 +323,7 @@
 
         const pageContainer = document.getElementById('page-container');
         
-        function navigateToForm(planName) {
-            localStorage.setItem('selectedPlan', planName);
+        function navigateToForm() {
             window.location.hash = '/form';
         }
 
@@ -343,7 +345,7 @@
                     { q: '¿Entregan diplomas o certificado?', a: 'No. Nosotros le ayudamos a cualificarse con actualización académica, con información de primera mano, confiable desde la fuente y le ayudamos a enfocarse en desarrollar las competencias exigidas por el Estado para sus docentes.' },
                     { q: '¿Cuánto tiempo dura el programa?', a: 'El programa completo está configurado con 190 horas, incluyendo las horas de trabajo práctico para que puedas estar lo suficientemente preparado y figurar entre los ganadores del concurso.' },
                     { q: 'Fechas y horarios', a: 'Tenemos programado iniciar clase el 14 de noviembre del año en curso.' },
-                    { q: '¿Dónde serían las clases?', a: 'Las clases serían en el Mega Colegio MIA Rogerio Velazquez Entre el parque Manuel Mosquera y el Comando de Policía. En todo caso, los datos exáctos llegarán a su correo electrónico y su whatsapp.' }
+                    { q: '¿Dónde serían las clases?', a: 'Las clases serían en el Mega Colegio MIA Rogerio Velazquez Entre el parque Manuel Mosquera y el Comando de Policía. En todo caso, los datos exactos llegarán a su correo electrónico y su whatsapp.' }
                 ];
                 
                 const faqContainer = document.getElementById('faq-container');
@@ -354,17 +356,24 @@
                 });
             }
 
-            if(document.getElementById('test-form')) {
-                const selectedPlan = localStorage.getItem('selectedPlan');
-                if(selectedPlan) {
-                    document.getElementById('form-subtitle').textContent = `Estás a un paso. Completa tus datos para el Plan "${selectedPlan}".`;
-                }
-                
-                document.querySelectorAll('select').forEach(select => {
-                    select.addEventListener('change', (event) => {
-                        if (event.target.value) event.target.classList.add('is-selected');
-                        else event.target.classList.remove('is-selected');
-                    });
+            // Lógica para el modal de Nequi
+            const nequiBtn = document.getElementById('nequi-btn');
+            const modal = document.getElementById('qr-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            if (nequiBtn && modal && closeModalBtn) {
+                nequiBtn.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
+                });
+
+                closeModalBtn.addEventListener('click', () => {
+                    modal.classList.add('hidden');
+                });
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.add('hidden');
+                    }
                 });
             }
         }
